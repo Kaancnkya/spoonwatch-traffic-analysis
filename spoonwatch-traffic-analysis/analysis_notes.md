@@ -1,4 +1,4 @@
-# Analysis Notes – Trickbot PCAP
+# Analysis Notes
 
 ## Initial DNS Observations
 
@@ -19,10 +19,12 @@
 - Below is a screenshot showing the suspicious DNS A queries initiated by the infected host:
 ![Suspicious DNS Queries](../screenshots/suspicious_dns_queries.png)
 
----
+## HTTP POST Traffic Observations
 
-## Next Steps
+- Multiple HTTP POST requests observed from the infected host (`192.168.1.216`) to external IP `2.56.57.108`.
+- All requests target the `/osk/` directory on the destination server.
+- Payloads use `.jpg` extensions, possibly to disguise data exfiltration.
+- Final request to `/main.php` suggests possible C2 communication or further stage.
+  ![HTTP POST Requests](../screenshots/http_post_requests.png)
 
-- Inspect HTTP requests (GET/POST) from the infected host.
-- Identify any payload delivery or outbound data exfiltration attempts.
 
