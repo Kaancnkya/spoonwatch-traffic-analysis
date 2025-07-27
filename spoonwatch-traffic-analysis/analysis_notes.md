@@ -17,7 +17,7 @@
   dns.qry.type == 1 && dns.flags.response == 0
 
 - Below is a screenshot showing the suspicious DNS A queries initiated by the infected host:
-![Suspicious DNS Queries](../screenshots/suspicious_dns_queries.png)
+![Suspicious DNS Queries](screenshots/suspicious_dns_queries.png)
 
 ## HTTP POST Traffic Observations
 
@@ -25,6 +25,6 @@
 - All requests target the `/osk/` directory on the destination server.
 - Payloads use `.jpg` extensions, possibly to disguise data exfiltration.
 - Final request to `/main.php` suggests possible C2 communication or further stage.
-  ![HTTP POST Requests](../screenshots/http_post_requests.png)
+  ![HTTP POST Requests](/screenshots/http_post_requests.png)
 
 
