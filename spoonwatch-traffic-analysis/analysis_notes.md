@@ -25,6 +25,7 @@
 - All requests target the `/osk/` directory on the destination server.
 - Payloads use `.jpg` extensions, possibly to disguise data exfiltration.
 - Final request to `/main.php` suggests possible C2 communication or further stage.
-  ![HTTP POST Requests](/screenshots/http_post_requests.png)
+  ![HTTP POST Requests](screenshots/http_post_requests.png)
+
 
 
