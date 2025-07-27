@@ -53,6 +53,15 @@ spoonwatch-traffic-analysis/
 - https://attack.mitre.org/techniques/T1059/001/
 - https://snort.org
 
+ ## PCAP File Access
+
+The original PCAP file used in this analysis is not included in this repository due to size and licensing limitations.  
+You can manually download the capture file from the following official source:
+
+🔗 [malware-traffic-analysis.net – 2022-01-07 Trickbot Infection](https://www.malware-traffic-analysis.net/2022/01/07/2022-01-07-Trickbot-infection.pcap.zip)
+
+After downloading, place the `.pcap` file inside the `/pcap` directory as shown above.
+
 ## License
 
 This project is intended for educational and cybersecurity portfolio purposes only.
