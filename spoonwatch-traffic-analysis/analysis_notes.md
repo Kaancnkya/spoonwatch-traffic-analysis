@@ -27,5 +27,15 @@
 - Final request to `/main.php` suggests possible C2 communication or further stage.
   ![HTTP POST Requests](screenshots/http_post_requests.png)
 
+## Malicious Payloads Observed
+
+Although the `.exe` files extracted from the PCAP were not flagged, multiple `.jpg` files and `main.php` uploaded by the infected host were identified as malware.
+
+- These files shared the same hash:
+  - `7b8ab07521c24e8ec610611e7e15d2fd39336166db6509885b8500d2a2bbfb14`
+- Detected as: `Win.Malware.Agent-7761700-0`
+- Indicates likely obfuscation or masquerading tactics (e.g., image or PHP file used to deliver a payload)
+
+![VirusTotal Detection](../screenshots/virustotal_detection_mainphp.png)
 
 
