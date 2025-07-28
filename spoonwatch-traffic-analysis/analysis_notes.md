@@ -57,4 +57,28 @@ The behavior observed maps to the following MITRE ATT&CK technique:
 
 Such tactics are used to bypass user suspicion and evade simple file extension-based filters.
 
+## Snort Detection Rules
+
+To detect possible Trickbot C2 communication based on our PCAP analysis, we wrote two custom Snort rules:
+
+### Rule 1 – POST Request to `/osk/` Directory on Malicious IP
+
+```snort
+alert tcp $HOME_NET any -> 2.56.57.108 80 (msg:"[Trickbot] Possible C2 Communication to known malicious IP"; flow:established,to_server; content:"POST"; http_method; content:"/osk/"; http_uri; sid:100001; rev:1;)
+This rule detects HTTP POST requests from an internal host to the /osk/ path on the suspicious IP 2.56.57.108.
+
+### Rule 2 – POST to /main.php Endpoint
+
+alert tcp $HOME_NET any -> 2.56.57.108 80 (msg:"[Trickbot] Possible POST to C2 Command Endpoint (/main.php)"; flow:established,to_server; content:"POST"; http_method; content:"/main.php"; http_uri; sid:100002; rev:1;)
+This rule detects POST traffic directed to main.php, which we suspect to be a command-and-control endpoint.
+
+### Rule Deployment and Testing
+We created a file named trickbot.rules and added it to Snort’s configuration with this line in snort.conf:
+include $RULE_PATH/trickbot.rules
+Snort was successfully started with the new rules.
+
+
+
+
+
 
