@@ -19,6 +19,16 @@
 - Below is a screenshot showing the suspicious DNS A queries initiated by the infected host:
 ![Suspicious DNS Queries](screenshots/suspicious_dns_queries.png)
 
+## HTTP POST Payload Analysis
+
+- Several HTTP POST requests were made by the infected host to `2.56.57.108` targeting the `/osk/` directory.
+- Despite the `.jpg` extension in filenames like `6.jpg`, the payloads contain executable headers (`MZ`), indicating PE (Windows executable) files.
+- This is a common masquerading tactic used in malware delivery, aligning with MITRE ATT&CK technique **T1036.003 - Masquerading: Rename System Utilities**.
+- The content type used was `multipart/form-data`, typically used for file uploads.
+
+### 🔍 Screenshot – Suspicious POST to /osk/6.jpg
+![Suspicious POST /osk/6.jpg](screenshots/follow_tcp_stream_6jpg.png)
+
 ## HTTP POST Traffic Observations
 
 - Multiple HTTP POST requests observed from the infected host (`192.168.1.216`) to external IP `2.56.57.108`.
