@@ -45,7 +45,7 @@ Although the `.exe` files extracted from the PCAP were not flagged, multiple `.j
   - `7b8ab07521c24e8ec610611e7e15d2fd39336166db6509885b8500d2a2bbfb14`
 - Detected as: `Win.Malware.Agent-7761700-0`
 - Indicates likely obfuscation or masquerading tactics (e.g., image or PHP file used to deliver a payload)
-
+![VirusTotal Detection](screenshots/hashes.png)
 ![VirusTotal Detection](screenshots/virustotal_detection_mainphp.png)
 
 ## MITRE ATT&CK Mapping
