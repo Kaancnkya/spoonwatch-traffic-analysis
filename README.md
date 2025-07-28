@@ -27,12 +27,14 @@ This analysis is based on a Trickbot infection simulation captured within a cont
 
 ## 🗂️ Project Structure
 
+```
 spoonwatch-traffic-analysis/
 ├── analysis_notes.md # Wireshark filters and investigation notes
 ├── ioc_report.md # Indicators of compromise (IP, domain, hash)
 ├── rules/ # Snort/Suricata detection rules
 ├── screenshots/ # Wireshark and alert screenshots
 └── pcap/ # Original PCAP capture (manually added)
+```
 
 
 ## 🛠️ Tools Used
