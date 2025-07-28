@@ -28,7 +28,7 @@ All the following files share the same hash and were flagged as malicious:
 |----------------------|----------------------------------------------------------------------|-------------------------------------|
 | main.php, 1.jpg–7.jpg| `7b8ab07521c24e8ec610611e7e15d2fd39336166db6509885b8500d2a2bbfb14`   | Win.Malware.Agent-7761700-0 (ClamAV) |
 
-## 🗂Notes
+## Notes
 - `.exe` files extracted from the PCAP were **not** flagged as malicious.
 - `.jpg` files and `main.php` had **identical hashes**, indicating a masquerading tactic (see MITRE ATT&CK T1036.003).
 
