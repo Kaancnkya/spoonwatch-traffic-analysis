@@ -65,11 +65,14 @@ To detect possible Trickbot C2 communication based on our PCAP analysis, we wrot
 
 ```snort
 alert tcp $HOME_NET any -> 2.56.57.108 80 (msg:"[Trickbot] Possible C2 Communication to known malicious IP"; flow:established,to_server; content:"POST"; http_method; content:"/osk/"; http_uri; sid:100001; rev:1;)
+```
 This rule detects HTTP POST requests from an internal host to the /osk/ path on the suspicious IP 2.56.57.108.
 
 ### Rule 2 – POST to /main.php Endpoint
 
+```snort
 alert tcp $HOME_NET any -> 2.56.57.108 80 (msg:"[Trickbot] Possible POST to C2 Command Endpoint (/main.php)"; flow:established,to_server; content:"POST"; http_method; content:"/main.php"; http_uri; sid:100002; rev:1;)
+```
 This rule detects POST traffic directed to main.php, which we suspect to be a command-and-control endpoint.
 
 ### Rule Deployment and Testing
