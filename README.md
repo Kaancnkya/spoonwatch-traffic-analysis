@@ -36,7 +36,7 @@ spoonwatch-traffic-analysis/
 ├── screenshots/ # Wireshark and alert screenshots
 └── pcap/ # Original PCAP capture (manually added)
 ```
-[📝 Incident Report](./incident_report.md) – Executive summary, host details, and IOC summary
+- [📝 Incident Report](./spoonwatch-traffic-analysis/incident_report.md)
 
 
 ## 🛠️ Tools Used
