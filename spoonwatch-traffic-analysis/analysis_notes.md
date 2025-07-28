@@ -38,4 +38,13 @@ Although the `.exe` files extracted from the PCAP were not flagged, multiple `.j
 
 ![VirusTotal Detection](screenshots/virustotal_detection_mainphp.png)
 
+## MITRE ATT&CK Mapping
+
+The behavior observed maps to the following MITRE ATT&CK technique:
+
+- **T1036.003 – Masquerading: Rename System Utilities**  
+  Several `.jpg` files and a `main.php` file shared the exact same hash and were flagged by VirusTotal as malware. This strongly suggests the use of file masquerading techniques to disguise a malicious payload as a harmless file type.
+
+Such tactics are used to bypass user suspicion and evade simple file extension-based filters.
+
 
